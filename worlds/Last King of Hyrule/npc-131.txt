@@ -1,0 +1,4 @@
+jumphurt=1
+playerblocktop=0
+npcblocktop=0
+nofireball=0

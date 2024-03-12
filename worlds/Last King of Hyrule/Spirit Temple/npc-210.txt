@@ -1,0 +1,5 @@
+frames=4
+framespeed=3
+framestyle=0
+gfxwidth=32
+gfxheight=32

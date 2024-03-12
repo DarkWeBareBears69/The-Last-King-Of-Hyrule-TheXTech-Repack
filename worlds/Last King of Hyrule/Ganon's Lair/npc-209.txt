@@ -1,0 +1,11 @@
+nohurt=1
+playerblock=0
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+width=156
+height=120
+gfxwidth=264
+gfxheight=200
+frames=1
+framestyle=1

@@ -1,0 +1,5 @@
+nogravity=1
+width=32
+height=128
+gfxwidth=98
+gfxheight=142

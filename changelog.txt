@@ -1,0 +1,702 @@
+TheXTech Changelog.
+
+Changelog for 1.3.6.4
+-Use OpenGL as the default renderer on supported platforms ("sdl" may be used in config.ini or at at the command line to request the SDL2 renderer)
+-Add ability to edit battle levels using in-game editor (@ds-sloth)
+-Fix bug where it was not possible to return to the main menu from an invalid battle mode level (@ds-sloth)
+-Fix vanilla bug where P2 could not close message box during shared screen coop (@ds-sloth)
+-Changed credits font id to 5 for outlines. (@0lhi)
+-Fix Emscripten bug where worlds created in the editor would get lost on page refresh (@ds-sloth)
+-Remove option "osk-fill-screen"; this behavior is now used whenever a touchscreen is active (@ds-sloth)
+-Fix TheXTech 1.3.6.1 crash on activating a joystick with an empty SDL name (@ds-sloth)
+-Fixed the TheXTech 1.3.6.3's startup crash on some 32-bit Windows systems. (@Wohlstand)
+-Removed config option "editor-edge-scroll" (enable by default on gamepads) (@ds-sloth)
+-Add ability to scroll in editor using mouse wheel or touchpad (@ds-sloth)
+-Fix TheXTech 1.3.6.1 bug where bitmask GIFs would sometimes be rendered incorrectly (@ds-sloth)
+-Fix TheXTech 1.3.6 bug where the editor could occasionally crash when placing warps (@ds-sloth)
+-Fix TheXTech 1.3.6 bug where the editor could not set the level name (used in battle mode) (@ds-sloth)
+-Fix TheXTech 1.3.6.1 bug affecting debug builds where the editor could crash when erasing objects (@ds-sloth)
+
+Changelog for 1.3.6.3
+-Fixed a TheXTech 1.3.6.1 crash where object lookup table could not process items with negative size (@ds-sloth)
+-On level load, replace negative item sizes with size zero (such items cannot be created by any editor)
+-Fix TheXTech 1.3.6.1 bug where item would drop above incorrect player in SharedCoop mode (@ds-sloth)
+-Fix rare TheXTech 1.3.6 bug where newly-added player could get stuck in immune state if other player died (@ds-sloth)
+-Display current version (and git revision if a dev build) on title screen (@ds-sloth)
+-Wii U port: add WUHB build (@ds-sloth)
+-Fix TheXTech 1.3.6.1 bug where the score display would not show '9's when using legacy assets (@ds-sloth)
+-Use the ANGLE shader translator library to improve support for OpenGL ES 3.0 shaders on desktop platforms (@ds-sloth)
+-Fix vanilla / TheXTech bug where a player could clip into ground while standing on a downwards-moving slope, guarded by fix-player-downward-clip compat flag (@ds-sloth)
+-CONTROLS / LOGIC CHANGE: when riding a purple pet mount, alt run is now used to enter a pound (down is still used in compat mode) (@0lhi, @ds-sloth, @Wohlstand)
+-Fix TheXTech modern mode bug where simultaneous slope-ground collisions were not handled properly (@ds-sloth)
+
+Changelog for 1.3.6.2
+-Fixed a crash on attempt to add a game directory after storage permission grant on Android (@Wohlstand)
+-Added workaround for Little File Manager on Android (to open level file by content with no resources) (@Wohlstand)
+-Fixed TheXTech 1.3.6.1 bug where error messages at the main menu would lock the game (@ds-sloth)
+-Fixed an inability to parse LunaDLL Autocode files via MSVC builds of the game (@Wohlstand)
+-Added experimental support for the Nintendo Wii U homebrew platform (@Wohlstand).
+-Fixed audio not working when "/3ds/dspfirm.cdc" is missing on the 3DS (@Wohlstand).
+
+Changelog for 1.3.6.1
+-Fixed some of the performance slowdown problems using improved object spatial lookup tables (@ds-sloth)
+-Fixed the work of Sound FX on big-endian architectures (@Wohlstand)
+-Fixed directory creation flags on Vita (@suicvne)
+-Minor fixes to the gameplay recording system (@Wohlstand, @ds-sloth)
+-Changed the logic of the music pausing at the pause menu when P-Switch is active: don't suspend the entire sound stream, do suspend the music only (@Wohlstand)
+-Added experimental support for the Nintendo Switch homebrew platform (@Wohlstand)
+-Added experimental support for the Nintendo Wii homebrew platform (@ds-sloth - graphics and controls, @Wohlstand - audio and threading)
+-Added CLI build of the application with very minimal dependencies, suitable for CI testing of the game logic (@ds-sloth)
+-Added incomplete version of the Nintendo 3DS port (locked to 400x300 resolution until 1.3.7) (@ds-sloth)
+-Added performance statistics (in debug info HUD) for level designers and developers to check CPU time spent on each game task (@ds-sloth)
+-In-Game Editor: added ability to customize block, BGO, NPC, tile, music, section BG, and sound layouts in the editor (@ds-sloth)
+-In-Game Editor: added new Magic Block feature that automatically picks the proper item given its context (@ds-sloth)
+-Adjusted the bitmask to the RGBA conversion algorithm to apply the compromise among different semi-transparent textures (@Wohlstand)
+-Fixed an invalid byte hacking behaviour at the memory emulator on x86_32 processors (@Wohlstand)
+-Fixed the validation of  assets packages on Android where "introset"-based assets were treated as invalid (@Wohlstand)
+-The new font engine based on the Moondust Engine implementation has been added. Now, the game can print Unicode text in a condition where the assets package contains the necessary font resources. (@Wohlstand, @ds-sloth)
+-Added animation for keyhole exit. (@ds-sloth)
+-Added ShowLevelName and ShowLevelFile LunaScript commands (@Wohlstand)
+-An uncolored PCursor.png is now automatically colored and used for indicating player menu selections; MCursor0.png and MCursor3.png are used as fallbacks. (@ds-sloth)
+-If controller inputs are displayed onscreen, Player 2's controller is now shown at the world map screen. (@ds-sloth, @0lhi)
+-Controls: don't continuously rumble on player hurt after getting level exit NPC. (@ds-sloth)
+-Added compatibility flags for multiple early vanilla bugfixes. (@ds-sloth)
+-Added level exit cheats from SMBX2. (@SpencerEverly, @0lhi, @ds-sloth)
+-Fixed an unexpected disappear of LunaScript-drawn text and graphics when a pause menu or a message box was open. (@Wohlstand)
+-Added game save info (score, lives, coins, etc) display to the main menu screen. (@ds-sloth)
+-Allow a single player to reconnect their controls at the menu screen. (@ds-sloth)
+-In Magic Hand mode, cursor now snaps to current layer's grid, instead of global grid. (@ds-sloth)
+-Fixed crash that could occur if player warped with >2P cheat active. (@ds-sloth)
+-Correctly render large level graphics at the edge of the screen. (@Wohlstand, @ds-sloth)
+-Miscellaneous improvements for the Emscripten experience on iOS (@ds-sloth)
+-Fixed bug where touchscreen controller would stay active during text entry screen without rendering (@ds-sloth)
+-Added an ability to place multiple stars at the same section using the Unique Star ID special value. (@Wohlstand)
+-Added support for Discord Rich Presense support (need to enable it at the game settings). (@Wohlstand)
+-Added the localization system which allows you to translate engine into other languages than English. (@Wohlstand)
+-Deep revision of the game's internal NPC and render logic, with up to 2x higher framerates on very large levels. (@ds-sloth)
+-Fixed vanilla bug where player could be crushed by a sloped ceiling (@ds-sloth)
+-Fixed vanilla bug where player could be crushed by a horizontally (not vertically) moving ceiling (@ds-sloth)
+-Fixed TheXTech bug where a semi-transparent message box was not rendered correctly with a single-line messages. (@ds-sloth)
+-Log messages now include timestamps relative to application start time. (@Wohlstand)
+-Keyhole framerate fix will be enabled by default (@Wohlstand, @0lhi)
+-Fixed vanilla bug where player could fall through an Instant/Portal warp while performing the "Pound" move. (@ds-sloth)
+-Fixed vanilla bug where held item would not affect a hostile NPC that intersects with an immune NPC (such as an egg container). (@ds-sloth)
+-Fixed vanilla bug where engine would appear to break if an event changed the boundaries of a different section. (@ds-sloth)
+-Added modern animations for section boundary change in multiplayer. (@ds-sloth)
+-The keyhole framerate fix has been turned on permanently, now it's impossible to disable this fix (@Wohlstand, @0lhi)
+-Misc improvements for the level testing experience (@ds-sloth, @0lhi)
+-Restyled pause menu user interface (@ds-sloth, @0lhi)
+-Misc stability improvements (@Wohlstand, @ds-sloth)
+-Fade out effect occurs during the last 30 frames of the SMBX64 death animation instead of during a pause following the animation (@ds-sloth)
+-Added support for starting a level test from a certain warp (available in editor and command line flag -w / --start-warp) (@ds-sloth)
+-Added support for starting a world with a specific save (--save-slot X) from the command line (@ds-sloth)
+-In modern mode, pause speedrun timer during qScreen animation (game logic is frozen) (@0lhi, @ds-sloth)
+-On attempt to start a level without start point or entrance warp specified, an error message will be shown (@Wohlstand)
+-Update of controller disconnect user interface (@0lhi, @ds-sloth)
+-Add a beta OpenGL renderer for the game, supporting proper bitmask (GIF) rendering (@ds-sloth)
+-The pause menu is now able to be controlled by all players. (@ds-sloth, @0lhi)
+-Multiple message boxes are now controlled by the player who originally triggered the event. (@ds-sloth)
+-Added simple pre-processor that allows showing different message text depending on a playable characters (@Wohlstand)
+-Updated scroll transition effect for warps; no longer pauses the game for other players. (@ds-sloth)
+-Fix vanilla bug where NPC would never respawn if it came onscreen same frame as it had timed out. (@ds-sloth)
+-Removed thextech.ini option to enter codes at pause menu; this ability is now unlocked by the input sequence LRLRRLRRRLRRRR (@0lhi, @ds-sloth)
+-Removed TheXTech 1.3.6 exploit where dead player could be respawned for free by dropping then adding them (@ds-sloth)
+-Removed "strict-drop-add" thextech.ini option (@ds-sloth)
+-Removed deprecated global controls settings "ground-pound-by-alt-run", "enable-rumble", and "enable-battery-status". Set these per-profile in the controls menu. (@ds-sloth)
+-In speed run mode, indicate whether Cheater mode is active by showing "CMode" instead of "Mode" in the top-right. (@0lhi)
+-Fixed the version number being printed improperly via `--version` command-line argument. (@Wohlstand)
+-Fixed TheXTech 1.3.6 bug where P2 would keep partial control during Single Coop (superbdemo2) and Cloned Player (superbdemoX) modes. (@ds-sloth)
+-Fixed TheXTech 1.3.6 bug where 2P gameplay recordings might fail to replay correctly. (@ds-sloth)
+
+Changelog for 1.3.6
+-Added an ability to toggle drawing of the HUD and other on-screen meta data using F1 key (@Wohlstand)
+-Added an ability to type cheats on touchscreen using special new cheats key (@Wohlstand, @ds-sloth)
+-Added native support for LunaDLL Autocode script language (@Wohlstand)
+-Added deaths counter feature (keeps counting of deaths per game save) (@Wohlstand)
+-Reworked the controllers support (@ds-sloth)
+-Touchscreen support for non-Android platforms (@ds-sloth)
+-Added ability to save multiple keyboard profiles (@ds-sloth)
+-New multiplayer start screen (@ds-sloth with design input from @0lhi)
+-Added controller disconnect recovery screen (@ds-sloth)
+-Ground pound by alt run is now a per-controller setting (@ds-sloth)
+-Added an ability to add/drop the second player from the pause menu (@ds-sloth)
+-Added the support for real-time audio effects such as reverb and SPC echo. They can be configured by sounds.ini for each level section (@Wohlstand)
+-Performance improvements for showing, hiding, and moving layers (@ds-sloth)
+-Reduced game object memory footprint (@ds-sloth)
+-Performance improvements when run on slow filesystems (@ds-sloth)
+-Fixed unexpected music got started after the level got entered too quick from the world map (@Wohlstand)
+-Fixed the vanilla bug: a Player can stuck in the pipe when enters it being a fairy (@Wohlstand)
+-Added an option to enable the fast walking on the world map (@ds-sloth, @Wohlstand)
+-Added an ability to customize UI/common assets from the episode and level sides (@Wohlstand)
+-Added a blink effect at speedrun timer on level/episode completion (@Wohlstand)
+-Added an in-game editor based on the original game's editor code (requires EditorIcons.png asset) (@ds-sloth)
+-Added config option to show the current episode's title onscreen (@ds-sloth)
+-Fixed the clipped render of the Roto-Disk's effect (@Wohlstand)
+-Fixed the lock/star sign behavior at locked two-way warps: now they work correctly at the opposite side (@Wohlstand)
+-Added an ability to set a different path for the user directory by command line argument (@Wohlstand)
+-Blocked an ability to start the game with no episodes or battle levels available in the list and prevented several issues with this (@Wohlstand)
+-Added option to disable or always perform 2x texture scale down optimization (@ds-sloth)
+-Added the ability to have multiple intro levels per assets pack (if introset directory exists and it contains at least one level file, they will be selected randomly every time when main menu opens) (@Wohlstand)
+-Added game selection menu into Android launcher: every browsed assets directory will be remembered and can be accessed quickly using the new menu (@Wohlstand)
+-Added the individual sound for Ludwig von Koopa's death (@Wohlstand)
+-Added the individual sound for Larry Koopa's death and shell spinning after stomp (@Wohlstand)
+-Fixed an improper new (when specific compatibility option is not disabled) behaviour of the Skull Raft when the head segment impacts a wall but loses a floor at the same time, causing the following segments to suspend forever (@Wohlstand)
+-Fixed the issue of a possible fall through the floor if walking point-blank to a block that had an extracted bonus and another solid block placed under it (does not happen if the "fix-player-downward-clip" option was disabled) (https://github.com/Wohlstand/TheXTech/issues/401) (@Wohlstand)
+-Removed the "require-ground-to-enter-warps" compat.ini option as redundant: there is the native option of LVLX and 38A-LVL level formats to enable this behaviour. (@Wohlstand)
+-Some options of the compat.ini have been renamed (for backward compatibility, there are aliases kept) (@Wohlstand)
+-Added the individual sound for Link's iceball shoot (@Wohlstand)
+-Added the proper sound for Link's fireball shoot (@Wohlstand)
+-Fixed TheXTech bug where if a moving layer stopped while a player was climbing a BGO, the player would keep moving. Also added bugfix for corresponding vanilla bug that occurred if a player was climbing a moving layer NPC. (@ds-sloth)
+
+Changes for 1.3.5.3-1
+-Fixed autostart events behaviour
+
+Changes for 1.3.5.3
+-Fixed the vanilla crash: Attempting to freeze any Pokey segments when they have the "noiceball=0" option set will cause the out-of-range error with NPC-ID=-3 in a random moment. (https://github.com/Wohlstand/TheXTech/issues/220)
+-Changed the user directory location for macOS-built games into the "~/TheXTech Games/<bundle name without .app suffix>/" to avoid conflict between different games ran on the same device.
+-Changed the debug assets location on macOS into "~/TheXTech Games/Debug Assets/" to simplify the debug environment installation.
+-Fixed BGO-65, Bowser III, and rail platforms compatibility with SMBX build version up to 30
+-Fixed the false positive that enables the Yoshi Mode of music when a player actually doesn't ride any Yoshi
+-Mario and Luigi will be only available at episodes built with SMBX older than build version 30 (the first version that introduces Peach, Toad, and Link)
+-Fixed the invalid vertical offset while drawing a playable character sprite
+-Resolved the old jittering problem when drawing a playable character while moving the camera (thanks to @ds-sloth for the fix)
+-Fixed the minor graphical distortion of a playable character that appears while flying up and down with a shoe.
+-The last played episode will be reminded and scrolled at the episode selection menu
+-Improved episodes menu control: added mouse wheel, page-up/page-down/home/end/delete, and left/right/alt-run/alt-jump/drop on controllers to scroll episodes lists
+-Fixed the vanilla bug: episodes list menu gets reset every attempt to go back from the character or the game save slot select menu
+-Fixed the soft-lock in an attempt to erase the gamesave using the two-player game menu
+-Order of episodes lists now alphabetical
+-Added the "compat.ini" option to require players to be on the ground to enter warps
+-On-screen elements such as HUD and other printing debug information will not shake with in-game happenings
+-Added screen fading effects at the world map and levels
+-Added support for different transition effects per every warp entry
+-Fixed the vanilla bug: The deadlock in the form of a looped message box showing will happen in the condition: the first NPC activates another NPC using recursive activation of all touching NPCs. And when the second NPC has an on-activation event trigger that hides its layer and shows a message box
+-Fixed the unexpected Wart's death sound spam
+
+Changes for 1.3.5.2
+-Fixed the ARM64 building
+-Updated the log writer
+-Disabled the "Boss Dead" event hook to stop the episode speed-run timer by default, added the compat.ini options to enable and configure it
+-Fixed the unexpected Swooper flap sound played after the Swooper has gone far away
+-Fixed the vanilla bug: The Swooper has avoided being started to fly when inactive
+-Added the compatibility level command line option separated from the speed-run modes (However, the speed-run mode will still override the compativility level)
+-Added an option to enable the background game controller input handling
+-Portal warps have been allowed to be used for level entrances and level exits (Instant warps kept unsupported to avoid possible compatibility issues)
+-Added the cannon pipes that can shoot the player with a given speed
+-Added the workaround for custom background2-42 that has non-multiple 4 height (there are several custom sprites with the 3455 invalid height, they must be 3456)
+-Fixed an incorrect speed-run timer render at multiplayer mode
+-The controller state print has been replaced with a controller drawing to indicate the pressure state of buttons
+-Added the opt-in 2x scale down optimization for all textures to reduce the memory usage
+-Fixed the confusion when using the modern section auto-scroll settings when an auto-scroll fix was disabled
+-License was changed into GPLv3 (see details: https://github.com/Wohlstand/TheXTech/issues/162)
+-Enabled the work on the Android TV
+-Fixed the game start error after granting the storage permission on Android 9 and lower
+-Added an ability to change the look of the launcher screen on Android via gameinfo.ini (Change the logo, change the background, and set up the simple animation)
+-Added mask fallback support for custom graphics mask compatibility for old episodes
+-Fixed vanilla bug: Attempt to enter the locked warp or take the star with star-locked warp the game will crash if a level has no BGO at all
+-Make turn blocks (block-90) work as bricks when SMBX19 and lower level file version is open
+-Added a workaround for the yellow platform (NPC-60) at "The Invasion 1" episode where it won't move at level42
+-Added Billy Gun (NPC-22) behavior compatibility with SMBX 1.2 and 1.1.x and older file formats
+-Added wireless game controllers battery status displaying when enabled at the settings
+-Added device battery status displaying at the right-top corner when enabled at the settings
+-Fixed an inability to save the game when game assets were stored at SD Card on an Android device
+-Added support for gamecontrollerdb.txt at the assets root and at the user directory
+-Fixed vanilla bug: World map music won't resume after going through the warp that leads to no music points or the music point with the same song
+-Fixed the improper custom music change when going through the warp on the world map
+-Fixed vanilla bug: Offscreen NPC can now respawn during the stopwatch freeze
+-Added Thwomp (NPC-37) behavior compatibility with SMBX 1.0.x
+-Added the Yoshi mode support for specified songs at the music.ini: mute selected track number without Yoshi, enable it back when Yoshi is presented
+-Fixed a bug when a last world map music is not remembered when sound is disabled
+-Fixed the wrong restart place when running the lasanha of levels and "restart level after death" option is enabled
+-Fixed the NPC logic distortion caused by early gfx update
+-Added an ability to customize an outro behaviour using gameinfo.ini
+-Battle mode access can be disabled via gameinfo.ini
+-Two-player game mode access can be disabled via gameinfo.ini
+-The Scores of Power-Ups (NPC-9, NPC-14, NPC-34, NPC-169, NPC-170, NPC-182, NPC-183, NPC-184, NPC-185, NPC-249, NPC-250, NPC-264, NPC-277) can be changed via npc-X.txt
+-Added a fixed behavior for rail platforms and grinder (NPC-60, NPC-62, NPC-64, NPC-66, NPC-104, NPC-179). It can be enabled using new-added custom values
+-Fixed the collision bug when an attempt of the player with the shoe to jump up at the moving NPC being pushed into the wall, causes the player to go through the wall
+-The settings/thextech.ini config file will be created on the first launch if not exist
+
+Changes for 1.3.5.1
+-Episodes and battle levels lists now loading in the separated thread with a progress showing
+-Fixed the regression caused world map music not being switched properly
+-Added an ability to control the intro scene activity on the level by `gameinfo.ini`: set maximum number of running players, and enable/disable the activity at all
+-Fixed an inability to copy the game save based on old files at episode directory
+-Fixed the vanilla bug: incorrect blooper effect when stomped (needed an npc-*.txt with the "jumphurt=0" flag being set)
+-Changed the default compat.ini value "fix-autoscroll-speed" into "false" to prevent possible glitches from invalid setup given by several old levels
+-The "Checkpoint" sound will be played when selecting the "Save and Continue" menu item at the pause menu
+-Fixed a minor glitch at the game save copy and erase menu while moving the mouse under menu block
+-Fixed the bullet bill getting stuck after it got unfrozen (Thanks to the @ds-sloth for the contribution!)
+-Updated an inter-process protocol with adding new commands
+-Fixed the vanilla bug: The dragon coin has avoided being turned into the block by the P-Switch activation
+
+Changes for 1.3.5
+-Fixed the gamepad control stuck because of axes returned value that doesn't equal the initial state on some devices
+-Fixed the invalid conversion of old sprites with a mask that is smaller than the front
+-Implemented usage of the SDL_GameController with some extras like using the rumble and the battery status (Render of the status is not implemented yet)
+-Player now can quit the credits screen by pressing the Start button on the gamepad
+-Fixed the glitched rendering of the first frame at the main menu and at the world map when frame-skip is enabled
+-Every gamepad model will keep its individual settings per player
+-Added the "Reset to default" menu item to reset controls
+-Resolved the slow work of the world map on weak devices
+-Added the performance debug printing that you can activate by the F3 key
+-Automatically select the gamepad on startup if the user didn't manually set up the keyboard usage
+-Added the ability of the hot connection and disconnection of game controllers
+-Control mappings have been moved into the "controls.ini" to keep the "thextech.ini" file being human-friendly
+-Swooper can play the flap sound if presented at the assets pack
+-Iceball may have the individual shoot sound of sounds.ini enables that
+-Fixed an unexpected ability of Peach to spin-jump from off vines and on pressing of the ALT-JUMP while the JUMP key is held
+-Fixed the GFX shaking of the upside-down piranha plants when they got customized in some cases
+-NPC freezing sound got an individual sound instead of the shell hit
+-Frozen NPC breaking got an individual sound
+-Added an ability to put the silence instead of the actual sound file by specifying the "silent=true" field instead of the "file=..."
+-Thwomps will slightly shake the screen on their fall
+-Yoshi's ground pound will slightly shake the screen
+-Sprout vine from blocks got an individual sound
+-Fixed an incorrect word wrapping at message boxes
+-Fixed the vanilla GFX bug: the thwomp's ground pound dirt effect being improperly aligned
+-Bowser III'rd will shake the screen on his ground pound
+-Fixed the vanilla bug: Link may die when attempting to use the Clown Car being in a fairy form, and when flying up on the Clown Car while any vines behind him
+-Avoided the ability to switch the playable character by the Clown Car at the top of a player switch block
+-Added an ability to restore old checkpoints behavior of the SMBX 1.3 using the "compat.ini" file
+-Fixed the vanilla GFX bug: an incorrect Link's alignment at the Clown Car after being transformed from anybody who rides Yoshi
+-Fixed the skull raft getting stuck at the ceiling slope blocks
+-Fixed the vanilla GFX bug: the unexpected water splash effect appearance at BGOs
+-Fixed the inability to set up the jump button on gamepads in some conditions
+-Fixed the vanilla bug: inability to set the autoscrolling for any non-zero section
+-Added the support for the simple-style per-section autoscrolling setup from the SMBX-38A specification
+-Fixed the vanilla crash when NPC being located far off the screen, tries to find blocks
+-Added an ability to copy and delete game saves from the game menu
+-Fixed the missing "Game Beaten" flag while loading the game save
+
+Changes for 1.3.4
+-Fixed the inability to use any custom sounds and custom music at level's custom data directory
+-Added an ability to change sound setup (sample rate, channels, sample format, and the buffer size) via the [sound] INI section
+-Optimized the work of a lazy-decompression algorithm workflow
+-At credits, the bible quote has been replaced with a meme
+-Fixed the vanilla bug: free-falling platforms getting confused when the player changes their power-up state
+-Fixed an inability to autostart events when "restart level after death" mode is enabled on the world map
+-Fixed the case when Pokey getting collapsed during walking on slopes
+-Fixed an unwanted player bounce by a filter block after NPC stomp
+-Added the "compat.ini" support for episode and level specific to enable/disable certain bugs of the old game
+-Fixed the vanilla bug: player can get clipped into floor while standing on a block of a down-moving layer
+-Fixed the vanilla bug: NPC can get clipped into floor while standing on a block of a down-moving layer
+-Fence BGOs now can move player together with a moving layer as vine NPCs does
+-Fixed the vanilla bug: attempt of player to jump from NPC standing together with getting pushed into the wall causes the clipping
+-Fixed the vanilla bug: resolved an incorrect behavior of a skull raft cells that makes the raft being squished when reaching a barrier wall
+-Credits look and performance has been improved
+-Fixed the vanilla bug: Peach can't escape the running shell surf
+-Loading screen now goes smoother (except Emscripten)
+-Level testing will quit on success completion of a level
+-Improved the framerate controller behavior, added the guarantee of the 65.1025 FPS on almost all supported platforms
+-Added the Speed-Runner mode which can be enabled via the --speed-run-mode <mode> command line argument
+-Fixed an wrong FPS while the key-hole exit is in process
+-Improved the frame-skip logic
+
+Changes for 1.3.3.1
+-Fixed a crash, caused by the incremental locked warps counter that leads BGO array exciting
+-Added support for Windows ARM64 target architecture
+-Added support for Apple Silicon target architecture
+-Fixed the inability to enter levels through warp were extension is missing
+
+Changes for 1.3.3
+-Added the "gameinfo.ini" to give the support for the partial customization of internals (window/game title, character names in menu, credits, etc.)
+-Added an ability to globally override NPC settings by placing of npc-*.txt file into graphics/npc directlry of assets
+-Added an ability to run executable with a different assets directory specified
+-Added the support for playable character custom INI calibrations
+-Message box line breaking algorithm has been improved, added support for new-line characters
+-Settings now can remember the initial state of the frame-skip and show-fps options
+-Added an option to make use the Alt-Run key for Yoshi's Ground-Pound ([gameplay] section and 'ground-pound-by-alt-run' boolean field)
+
+Changes for 1.3.2.4
+-Allow music change for outro level (if outro level has non-silent music, it will be played instead of built-in)
+-Allow unlimited count of episodes and battle levels
+-Fixed an incorrect effect frames count rounding, caused glitches at the death effect for a Hammer Bros.
+-Corrected the sensitivity of axes-based sticks of game-pads to prevent the mystery, caused by value errors
+
+Changes for 1.3.2.3
+-Fixed a SIGFPE crash, caused by an attempt to load some custom effects
+-Resolved the inability to grab vegetables normally, caused by an incorrect porting of logical expression
+
+Changes for 1.3.2.2
+-Fixed an incorrect computation of effect sizes, caused by a missing part of code
+
+Changes for 1.3.2.1
+-Reworked joysticks support
+-Added a workaround for case-sensitive file systems
+-The 1up sound now playing multiple times if the player has got more than 1 life (for example, a 3-up moon)
+-Fixed a broken work of magic potion warp packed inside of a grass container
+-Fixed a minor inaccuracy of the moving layers system
+-Fixed an incorrect process of blocked playable characters while loaiding the episodes list
+
+
+Changes for 1.3.2
+-Added an own timeout sound-92 for P-Switch timer (will be played with 3 seconds before the end)
+-Added a level testing interprocess interface to work with PGE Editor
+-Fixed the Podoboo's tail effect glitch
+-Fixed an incorrect priority of BGO65 in the level file of SMBX prior to 10 format
+-Fixed a classic Bowser's behavior in "The Invasion 1" episode from SMBX 1.0.x
+-Removed 20 layers limit to show/hide/toggle per event
+-Extended limit to use up to 200 sections in one level
+-Added an error message on attempt to open an invalid level file
+-Fixed a glitch of the rendering of the two-camera screen caused by an incorrect SDL_RenderSetViewport() call usage
+
+
+Changes for 1.3.1 (First version made by Wohlstand in March 2020):
+
+Technical stuff
+-The whole code has been ported into C++, taking use of libFreeImageLite, SDL2, and MixerX.
+-Built-in Editor has been removed in favor of PGE devkit
+-Full support of UTF-8 in filename paths and internal text data (original game had the only 8bit ANSI support).
+-For graphics and controlling, it uses an SDL2 library while original game have used WinAPI calls and GDI library.
+-It uses PGE-FL that has a better file formats support.
+-A support for WLDX world maps are allowing unlimited credits lines and custom music without necessary to use a music.ini for music replacements.
+-Some LVLX exclusive features now working: vertical section wrap, two-way warps, custom "star needed" message, warp enter event, ability to disable stars printing in HUB episodes for specific door, ability to disable interscene showing when going to another level through a warp.
+-Built-in support for episide and level wide music.ini and sounds.ini to override default music and sounds assets.
+-World maps now supports a custom directory to store any specific resources like custom tiles/scenes/paths/levels and don't spam the episode root folder with wolrd map resources anymore.
+-Default config format is INI, old config.dat format is no more supported, mainly because of incompatible key code values (SDL_Scancode versus VirtualKeys enum of Windows API).
+-Game saves now using the SAVX format instead of a classic SAV. However, if you already have an old gamesave, you still can resume your game with using of a new engine now (next gamesave attempt will result a SAVX file, old gamesave in SAV format will be kept untouched).
+-Game saves now saving in the "settings/gamesaves" folder instead of episode root to allow them be read-only.
+-Built-in PNG support for custom and default graphics. Masked GIFs are still supported for backward compatibility, however, without making an unexpected auto-conversion.
+-Checkpoints now multi-points! You can use them in your levels multiple times without limits!
+-Make the use of lazy-decompress algorithm to speed-up the loading of a game and reduce the whole memory usage.
+-For music and SFX, the MixerX library is used to give a support for a wide amount of sound and music formats!
+-It doesn't embeds any graphics: here is NO any trurely hardcoded graphics, everything now representing as an external graphics!
+-Some internal limits was been expanded.
+-Built-in GIF recorder by F11 key (F10 on macOS, F11 is reserved by system UI for a "show desktop" action)
+
+Bugfixes
+-Fixed a crash when mushroom falls into the lava
+-Fixed a division by zero error caused by match of player and Venus Firetrap NPC centers
+-Fixed an unnecessary ability to climb invisible fences
+-Fixed a mystical speed-adding while climbing fences, caused by after standing on any moving layers
+-Attempt to fix the level data initialization which was been incomplete and caused various issues like incorrect position of moving layers
+
+
+
+Super Mario Bros. X Changelog.
+
+Changes for 1.3 (last version made by Redigit in October 2010):
+
+Players
+-Peach, Toad, and Link can now make use of the Leaf, Tanooki Suit, and Hammer Suit power-ups.
+-Toad can spin jump.
+-Link now moves a little bit quicker.
+
+Misc.
+-Quicksand
+-Attach Layers to NPCs
+-Fleet Glide Galaxy Music
+-SMW Desert Night Background
+-Block Fill Tool
+-NPC Text Preview
+-Custumizable NPCs
+-Screen Shot capturing (F12)
+-Slippery Blocks
+-Battle Mode
+-NPC generators can now be up to 60 second delay
+
+New Items
+-Ice Flower
+-Bubbles
+-SMB2 Door Potion
+-Propeller Block
+-Flame Thrower
+-Dragon Coins
+-? Mushroom
+-Random Power-ups
+-Toad's Boomerang
+-Peach's Heart Bombs.
+
+New Enemies
+-Roto-Disc
+-Firebar
+-Nipper
+-Mouser
+-Larry Koopa
+-Ludwig Koopa
+-Swooper
+-Hoopster
+-Volcano Lotus
+-SMW Lakitu (with the ability to choose what he throws)
+-SMW Spineys
+
+
+
+Changes for 1.2.2:
+
+Players
+-Link has been added as a playable character.
+-Toad has been added as a playable character.
+-Peach has been added as a playable character.
+-Mario and Luigi no longer automatically drop their reserve item when hurt.
+
+NPCs
+-The Silver SMW P-Switch has been replaced with a Green SMB3 P-Switch
+-All times stop effects play the SMB3 switch song
+-Added green, blue, and red rupees.
+-Added the heart piece.
+-Added the fairy pendant that turns the user into a fairy.
+-Added the SMB2 mushroom.
+-Added a Zelda 2 style lock.
+-Turtle shells now have a 'spark' effect when kicked/hit.
+-Red Yoshi fireballs no longer die when they hit an enemy.
+-Added a blue SMW coin that is worth 5 coins.
+-Fireballs have a different smoke effect when they 'die.'
+-Added a giant Piranha Plant that takes multiple hits to kill.
+-Max time for NPC generators has been raised to 60 seconds.
+-NPCs in the level editor are now animated.
+
+Blocks
+-Added blocks that change the player's character when hit.
+-Added blocks that only allows specific characters through them.
+-The SMB2 cracked block now has it's own smash graphic.
+
+Misc
+-The game window is now resizable.
+-Playable characters can be blocked in the world editor.
+-The player can switch characters on the world map by pressing pause and then tapping left or right.
+-The editor now shows what is inside blocks.
+-The debugger displays information about what NPCs are in the level.
+-You can now use PageUp and PageDown to change your current section in the editor.
+-There is now a menu option that brings up the help file.
+-The Level Settings tab no longer defaults to the level size cursor.
+-When using custom graphics, the icons in the editor now show the correct picture.
+-Added an option to play the game without sound.
+-Added an option to turn of the frame skip.
+-The editor now shows the contents of Eggs and Burried Items.
+
+Bug Fixes
+-Fixed a bug that would cause sound/music not to load in the game.
+-Fixed the bug that caused NPCs to get 'smashed' when they shouldn't have.
+-The level background is now drawn correctly when the screen splits horizontally.
+-Several small bug fixes.
+
+Cheat Codes
+-Added 'anothercastle'
+-Added 'ibakedacakeforyou'
+-Added 'iamerror'
+-Added 'fairymagic'
+
+
+
+Changes for 1.2.1:
+
+Engine Updates
+-NPCs can now be crushed by moving blocks.
+-Added SMB2 throw sound for SMB2 enemies that are thrown.
+-You are now given the option to chose between Mario and Luigi in 1 player mode.
+-Cheat codes are now back in the main game, but you can no longer save after using them.
+-You can no longer save the game while playing a level.
+-Added the cheat code wetwater.
+-Added the cheat code istillplaywithlegos.
+-The cheat sonicstoslow has become sonicstooslow.
+-Added the cheat code itsrainingmen.
+-Added the cheat code donttypethis.
+-Several cheat codes have been fixed.
+-The test settings window has been updated to include the new power ups.
+-The hot box for lava tiles has been pushed down by 6 pixels.
+-Now you can use the mouse to select the options on the menu screen.
+-Hit detection is now a little bit more lenient when deciding if a player should be hurt by an NPC.
+-Added the cheat code needaclock.
+-Added the cheat code powhammer.
+-Revived the cheat code imtiredofallthiswalking.
+
+Player
+-The player now sticks to downward slopes instead of falling over them. This should make it easier to jump over cliffs when running down a slope.
+-There is now a brief animation and delay when picking things up SMB2 style.
+-The player now spins while shell surfing.
+-The player no longer falls off a shell when it bounces off a wall.
+-The player can now grab shells from above.
+-The player now has walking animations when using a warp pipe.
+-The player can now swim upward fast by holding up while swimming.
+-The distance needed to fly was shortened very slightly.
+-Luigi's fireballs now go up steep slopes.
+-Luigi's controls have been tightened slightly.
+-When the first player is Luigi, he appears instead of Mario on the world map.
+-The player gets a slight speed boost when running down a slope.
+-Yoshi will be returned to you after you complete a level that takes him away.
+-Dead players no longer spawn from blocks containing the Hammer Suit or Tanooki Suit.
+-Luigi now causes all the coins to pop out of coin blocks after he hits them.
+
+NPCs
+-The SMW Goomba and SMB3 Bob-omb have been updated to more accurately reflect the games they're from. SMB3 Bob-ombs go farther when kicked.
+-Boom Boom now has a brief period of immunity when hit by objects. This stops him from being insta-killed.
+-After a veggie has been thrown up it will change speed if it hits an enemy. This prevents a single veggie from killing bosses.
+-The smashed Rex and Mega Mole now move faster. The SMB1 and SMW 1-ups now move the correct speed.
+-The Ice Block now melts 7 seconds after being picked up, unless thrown.
+-Only bosses now give points when falling into lava.
+-Wart now gives the correct amount of points when killed.
+-SMB1 Bowser now has a more predictable hammer throwing pattern.
+-NPCs now have walking animations and will walk out of a pipe when spawned with a warp generator.
+-Grass and turnips now have a higher pitched grab sound.
+-SMW saws now make the 'ticking' sound when on screen, are drawn behind blocks, and only stick out of the ground halfway.
+-Thwomps now create 'smoke effect' after hitting the ground.
+-The Ice Block now breaks bricks when thrown up.
+-Switch goombas and platforms have been recolored to match the SMW switch blocks.
+-Paratroopas set to hover left/right now flutter up and down.
+-Yoshi, Kuribo's shoe, and several other power-ups can now be off screen for 60 seconds before being reset.
+-The off screen timer of shells now resets after they break a block. Now you don't have to supervise them to make sure they are doing there job.
+-Sonic rings have been changed to a graphic style that fits the game better.
+-Mr. Saturn is now indestructible.
+-Blaarg's hit box has been fixed.
+-The Clown car now checks for collisions against blocks.
+-Added a silver P Switch that stops time for a short while when hit.
+-Added a red switch used for triggering events.
+-Added the stop watch from SMB2.
+-Added the POW block from SMB2.
+-Added the brown Paragoomba from SMB3 with Paratroopa AI.
+-Added the Paragoomba from SML2 with Paratroopa AI.
+-Added the goomba from SML2.
+-Added the venus fire trap from SMB3
+-Added pokey from SMB2.
+-Added the stop watch power-up.
+
+Blocks
+-Digable dirt now behaves correctly.
+-Munchers hurt from all sides.
+-SMW switch blocks have been recolored to look like they did in SMW.
+
+Backgrounds
+-SMW Ghost House background is now animated.
+-SMW Castle background is now properly animated.
+
+Bug Fixes
+-Fixed a bug that stopped the game from actually skipping frames when it was supposed to.
+-The yellow Yoshi now correctly ground pounds enemies on slopes.
+-The world map no longer unloads custom graphics after playing a level.
+-The Billy Gun and Hammer Bros. no longer keep shooting when the player loses control of himself.
+-The game more accurately decides which block the player should stand on while on multiple blocks. This mainly affects note blocks.
+-Fixed a bug that would push the player through blocks when standing on a falling block. (As seen in the last fight of The Invasion 2)
+-The game no longer freezes when using events to takeover the players controls and opening a message window.
+-The player can no longer climb vines while in Tanooki form.
+-NPC speed is now calculated correctly when walking on another NPC while underwater.
+-Checkpoints now work on episodes that use a hub world.
+
+
+
+Changes for 1.2:
+
+Engine Updates
+-Sloped tiles have been fully implemented, including the ability to slide down slopes.
+-New "projectile" spawn point that allows NPCs to be shot out of pipes.
+-Updated the graphics engine, allowing for custom graphics.
+-Spikes only hurt when hit from the correct angle
+-Keys can be used to unlock doors.
+-Swimmable water has been implemented.
+-The title screen now plays a level.
+-You can now use events to move layers.
+-Added online level edit mode.
+-Cheat codes now only work in the level editor.
+-Added auto frame skip.
+
+Players
+-Added the Tanooki Suit.
+-Added the Hammer Suit.
+-Added Fire Shoe Power-up that turns stomped enemies into fireballs and allows the wearer to walk on lava.
+-Added Blue Shoe Power-up that allows the wearer infinite flight.
+-There is a longer delay between eating enemies with Yoshi.
+-You can no longer spit and eat a shell in midair to fly indefinitely.
+-The player now needs to run longer before he can fly.
+-Players now "slide" when spit out of Yoshi.
+-Players can use lives to come back to life instantly in 2 player mode.
+
+Tiles/Backgrounds
+-Added cave tiles and two backgrounds (SMB3)
+-Added Mystic Cave Zone background (Sonic 2).
+-Added the underwater block (SMB1).
+-Added sloped grass (SMW, SMB3, SMB2) and cave (SMW, SMB3 & SMB1) tiles.
+-Added castle tiles and background (SMB1).
+-Added several tiles (SMB1) (SMB2).
+-Added coral block (SMB1).
+-Added fence and tree backgrounds (SMB1).
+-Added several castle tiles and backgrounds (SMW).
+-Added various blocks (SMW).
+-Added multiple lava tiles (SMW).
+-Added Ghost House background (SMW).
+-Added Wart's Throne Room tileset (SMB2).
+-Added several new Super Metroid tilesets.
+-Added 2 Super Metroid backgrounds.
+-Added clouds background (SMB2).
+-Added several new blocks. (Multiple)
+-Added six backgrounds. (SMB1 & SMB2)
+-Add table and chair background objects. (SMA4)
+-Added underwater backgrounds. (SMB3, SMW)
+-Added water dirt blocks (SMB3)
+-Added giant wood blocks (SMB3)
+-Added giant coral (SMB3)
+-Added water backgrounds objects (SMB1, SMB3)
+-Added bubble background.
+-Added the frozen coin and chomper blocks.
+
+NPCs
+-Added Goomba and Paragoomba (SMW).
+-Added Rex (SMW).
+-Added Mega Mole (SMW).
+-Added Poison Mushroom (SMB).
+-Added rings that act like coins (Sonic the Hedgehog)
+-Added Mushroom Blocks (SMB2).
+-Added Digable Dirt (SMB2).
+-Added flying Airship part (SMB3).
+-Added Mister Saturn (Earthbound).
+-Changed the Cheep Cheep (SMB1) to die when jumped on.
+-Blue Beach Koopas (SMW) can now kick Ice Blocks (SMB3).
+-Added Bullies (SM64). Sprites by LuigiFan.
+-Thwomp and the Boos can now be killed.
+-Added both normal Koopas and Parakoopas (SMB1)
+-Added Axe, which dies on contact with the player, that can be used to start events. (SMB1)
+-Added Thwomp (SMW)
+-Added Grinder (SMW)
+-Added Dry Bones. (SMW)
+-Added Mushroom, Fire Flower, 1-Up, and 3-Up Moon (SMW) (SMB1).
+-Added skull ride. (SMW)
+-Added the Rainbow shell, which when hit by a tail becomes a powerful item and allows Mario to ride it. (SMW)
+-Added Princess Peach. (SMB3)
+-Added collectible stars that don't end the level. (SMW)
+-Add the King Koopa. (SMB1)
+-Added Wart (SMB2)
+-Added Spark (SMB2).
+-Added 3 Super Metroid monsters.
+-Added Spike Top (SMW).
+-Added Mother Brain
+-Added Green Cheep Cheeps (SMB1, SMB3)
+-Added Red Cheep Cheeps that jump out of the water at the player (SMB3)
+-Added Bloopers (SMB1, SMB3)
+-Added some misc. Sushi from SMW
+-SMB2 enemies are now immune to fireballs
+-Podoboos are immune to fire and no longer kill enemy NPCs
+-Yoshi now run away faster when the player is hit.
+-The Billy Gun now shoots roughly twice as fast.
+
+World Map
+-Added several tiles and scenery objects (SMW).
+-Ability to choose start point.
+-Added level path background options.
+-Added several level icons. (SMBA4) (SMB3) (SMW
+-Instant warp zones.
+-Player faces the direction he is walking.
+-Added new levels and path graphics.
+
+Music
+-Added Meta Knight's Revenge (SSBB).
+-Added Castle music (SMW).
+-Added Castle music (SMB1).
+-Added Wart battle music (SMB2).
+-Added Item Room music (Super Metroid).
+-Added Underwater music (SMB1, SMB3, SMW, SM64)
+-Added Waluigi Pinball and SSBB Underground themes.
+-Added SM64 cave theme.
+-Added SMB3 hammer bros. theme.
+
+Bug Fixes
+-The player now correctly changes sections when he enters a door while standing on a NPC.
+-Fixed a bug that would cause the map to scroll to a location other then 0, 0 when changing modes to the world editor.
+-Added an auto-align toggle to the world editor.
+-Fixed several bugs with the conveyor belts.
+-Exits no longer despawn when they go off-screen.
+-World editor now plays sounds when the user saves and erases the map.
+-Player stops ducking when leaving a vertical pipe warp.
+-Spin Jump has been toned down.
+-Platform now properly pass through cross sections.
+-Fixed a bug that prevented music from playing in the 'intro.lvl"
+-P switch is no longer linked to music.

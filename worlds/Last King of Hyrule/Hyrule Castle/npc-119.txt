@@ -1,0 +1,9 @@
+nogravity=1
+speed=0
+foreground=1
+frames=1
+framestyle=0
+width=245
+height=52
+gfxwidth=245
+gfxheight=52

@@ -1,0 +1,8 @@
+jumphurt=1
+frames=2
+framespeed=7
+framestyle=0
+width=88
+height=64
+gfxwidth=88
+gfxheight=64

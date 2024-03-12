@@ -1,0 +1,8 @@
+nohurt=0
+jumphurt=1
+playerblock=0
+playerblocktop=0
+framestyle=0
+frames=1
+width=62
+height=32

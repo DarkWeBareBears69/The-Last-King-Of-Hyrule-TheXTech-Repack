@@ -1,0 +1,5 @@
+noblockcollision=1
+nogravity=1
+foreground=1
+width=64
+height=128

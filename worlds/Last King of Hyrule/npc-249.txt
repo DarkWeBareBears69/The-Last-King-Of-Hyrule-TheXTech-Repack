@@ -1,0 +1,4 @@
+nogravity=1
+frames=2
+width=16
+height=30

@@ -1,0 +1,5 @@
+jumphurt=1
+width=136
+height=52
+gfxwidth=192
+gfxheight=64

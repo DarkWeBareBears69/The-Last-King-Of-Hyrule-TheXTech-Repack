@@ -1,0 +1,11 @@
+playerblock=0
+playerblocktop=0
+foreground=1
+nohurt=0
+jumphurt=1
+frames=1
+framestyle=0
+width=60
+height=60
+gfxwidth=96
+gfxheight=96

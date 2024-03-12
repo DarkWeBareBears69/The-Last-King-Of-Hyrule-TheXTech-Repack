@@ -1,0 +1,4 @@
+frames=2
+framestyle=1
+width=40
+height=64

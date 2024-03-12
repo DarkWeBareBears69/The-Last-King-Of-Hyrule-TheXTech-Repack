@@ -1,0 +1,3 @@
+frames=3
+width=46
+height=44

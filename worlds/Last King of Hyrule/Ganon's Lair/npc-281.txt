@@ -1,0 +1,9 @@
+jumphurt=1
+frames=2
+framespeed=5
+framestyle=1
+width=64
+height=116
+gfxwidth=120
+gfxheight=120
+gfxoffsety=2

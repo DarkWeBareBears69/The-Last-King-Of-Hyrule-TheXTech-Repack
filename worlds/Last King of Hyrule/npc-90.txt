@@ -1,0 +1,4 @@
+speed=0
+width=14
+height=30
+npcblocktop=0

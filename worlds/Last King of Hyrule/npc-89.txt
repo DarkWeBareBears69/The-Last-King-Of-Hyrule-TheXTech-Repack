@@ -1,0 +1,5 @@
+jumphurt=1
+nohurt=1
+noyoshi=1
+noiceball=1
+width=24

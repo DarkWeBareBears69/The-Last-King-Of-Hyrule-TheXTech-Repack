@@ -1,0 +1,5 @@
+width=16
+height=30
+frames=2
+nogravity=1
+noblockcollision=1

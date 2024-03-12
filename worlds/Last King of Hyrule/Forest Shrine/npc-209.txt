@@ -1,0 +1,4 @@
+frames=1
+framestyle=0
+width=192
+height=100

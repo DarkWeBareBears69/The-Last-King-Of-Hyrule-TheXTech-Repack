@@ -1,0 +1,5 @@
+speed=3
+width=30
+height=62
+gfxwidth=30
+gfxheight=62

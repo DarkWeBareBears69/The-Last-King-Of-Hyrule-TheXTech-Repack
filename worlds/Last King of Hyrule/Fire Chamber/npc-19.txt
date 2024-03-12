@@ -1,0 +1,13 @@
+jumphurt=1
+playerblock=0
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+speed=0
+frames=1
+framestyle=1
+width=32
+height=80
+gfxwidth=60
+gfxheight=96
+noiceball=1

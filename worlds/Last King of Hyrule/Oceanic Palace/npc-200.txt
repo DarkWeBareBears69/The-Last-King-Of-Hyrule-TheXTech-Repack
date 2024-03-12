@@ -1,0 +1,6 @@
+nogravity=1
+speed=3
+width=216
+height=144
+gfxwidth=306
+gfxheight=162

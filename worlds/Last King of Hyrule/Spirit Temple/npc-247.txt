@@ -1,0 +1,10 @@
+jumphurt=1
+playerblock=1
+playerblocktop=0
+npcblocktop=1
+noiceball=1
+nohurt=0
+frames=1
+framestyle=0
+width=30
+height=32

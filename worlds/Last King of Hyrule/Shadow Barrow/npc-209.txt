@@ -1,0 +1,12 @@
+jumphurt=1
+playerblock=0
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+frames=2
+framestyle=1
+gfxoffsety=18
+width=48
+height=96
+gfxwidth=218
+gfxheight=124

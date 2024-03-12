@@ -1,0 +1,4 @@
+frames=1
+framestyle=0
+width=28
+height=54

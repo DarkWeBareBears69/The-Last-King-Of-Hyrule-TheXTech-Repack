@@ -1,0 +1,4 @@
+frames=2
+framespeed=1
+width=46
+height=44

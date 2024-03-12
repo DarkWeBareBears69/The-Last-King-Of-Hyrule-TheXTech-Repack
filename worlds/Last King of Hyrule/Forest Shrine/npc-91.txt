@@ -1,0 +1,6 @@
+frames=6
+gfxoffsety=-14
+width=32
+height=16
+gfxwidth=40
+gfxheight=32

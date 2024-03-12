@@ -1,0 +1,5 @@
+frames=2
+framespeed=20
+framestyle=0
+width=32
+height=62

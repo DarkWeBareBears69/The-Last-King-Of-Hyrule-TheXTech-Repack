@@ -1,0 +1,5 @@
+frames=2
+framestyle=0
+width=64
+height=80
+gfxoffsety=16

@@ -1,0 +1,7 @@
+nohurt=1
+nogravity=1
+noblockcollision=1
+width=156
+height=120
+gfxwidth=156
+gfxheight=120

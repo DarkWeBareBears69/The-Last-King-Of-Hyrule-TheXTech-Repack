@@ -1,0 +1,6 @@
+noiceball=0
+speed=2
+frames=4
+framestyle=1
+width=48
+height=30

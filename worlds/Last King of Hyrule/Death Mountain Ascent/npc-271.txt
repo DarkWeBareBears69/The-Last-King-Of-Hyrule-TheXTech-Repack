@@ -1,0 +1,2 @@
+jumphurt=1
+nofireball=1

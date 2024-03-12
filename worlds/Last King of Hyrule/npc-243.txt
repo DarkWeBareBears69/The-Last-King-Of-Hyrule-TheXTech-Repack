@@ -1,0 +1,6 @@
+jumphurt=1
+frames=3
+width=36
+height=30
+gfxwidth=64
+gfxheight=30

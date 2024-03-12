@@ -1,0 +1,10 @@
+nogravity=1
+nofireball=1
+foreground=1
+frames=4
+framestyle=0
+width=32
+height=32
+gfxwidth=48
+gfxheight=48
+gfxoffsety=6

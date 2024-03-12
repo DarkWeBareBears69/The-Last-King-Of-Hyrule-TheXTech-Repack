@@ -1,0 +1,6 @@
+jumphurt=1
+noiceball=0
+width=32
+height=28
+gfxwidth=32
+gfxheight=28

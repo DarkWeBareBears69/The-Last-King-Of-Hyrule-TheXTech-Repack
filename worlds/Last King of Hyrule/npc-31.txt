@@ -1,0 +1,8 @@
+playerblock=0
+playerblocktop=0
+npcblock=0
+npcblocktop=0
+frames=1
+framestyle=0
+width=16
+height=28
