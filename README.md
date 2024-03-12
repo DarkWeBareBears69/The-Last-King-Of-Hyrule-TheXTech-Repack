@@ -7,5 +7,6 @@ Original site: https://rpgmaker.net/games/6733/
 * A new disclaimer image
 * The SMBX logo in the title screen has replaced with the actual logo of the episode
 * The curtain in the title screen is now purple, like in the Zelda 2 game.
-* The coins in the HUD are replaced with rupees.
-* (tba)
+* The coins in the HUD are replaced with rupees. 
+* The crash game (battle mode) button in the title screen has removed in the repack.
+* (tba) 
