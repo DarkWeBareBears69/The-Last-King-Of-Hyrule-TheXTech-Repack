@@ -11,10 +11,10 @@ Original site: https://rpgmaker.net/games/6733/
 - [x] The crash game (battle mode) button in the title screen has removed in the repack.
 - [x] Fixed the bug where you can repeat the intro cutscene.
 - [x] The star in the HUD is now replaced with a triforce.
+- [x] Change the map interface background
 - [ ] Change the homepage in the title screen.
 - [ ] Change the coin sound in the disclaimer screen with a rupee sound, like in the Link To The Past game.
 - [ ] Change the warping sound in the map
-- [ ] Change the map interface background
 
 (more to come) 
 
