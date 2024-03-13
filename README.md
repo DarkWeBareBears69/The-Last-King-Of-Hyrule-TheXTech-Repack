@@ -3,7 +3,7 @@ TheXTech Repack of SMBX episode "The Last King Of Hyrule", originally made by ke
 
 Original site: https://rpgmaker.net/games/6733/
 
-## Differences In This Repack
+## Differences In This Repack (incomplete)
 - [x] A new disclaimer image
 - [x] The SMBX logo in the title screen has replaced with the actual logo of the episode
 - [x] The curtain in the title screen is now purple, like in the Zelda 2 game.
