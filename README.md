@@ -12,4 +12,5 @@ Original site: https://rpgmaker.net/games/6733/
 - [x] Fixed the bug where you can repeat the intro cutscene.
 - [ ] Change the homepage in the title screen.
 - [ ] Change the coin sound in the disclaimer screen with a rupee sound, like in the Link To The Past game.
+
 (more to come) 
