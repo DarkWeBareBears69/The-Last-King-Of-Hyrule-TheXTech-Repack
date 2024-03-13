@@ -15,8 +15,13 @@ Original site: https://rpgmaker.net/games/6733/
 - [ ] Change the homepage in the title screen.
 - [ ] Change the coin sound in the disclaimer screen with a rupee sound, like in the Link To The Past game.
 - [ ] Change the warping sound in the map
+- [ ] Fix the bug in the Manhandla
 
 (more to come) 
+
+## Testers
+* TheUnknownKoala4545
+* (more to come)
 
 ## Screenshots
 ![Disclaimer Screen](https://github.com/DarkWeBareBears69/The-Last-King-Of-Hyrule-TheXTech-Repack/blob/main/screenshots/Screenshot_2024-03-13-08-10-23-15_fc9b0eb1832cb4f1879c12bf3b54568e.jpg?raw=true)
