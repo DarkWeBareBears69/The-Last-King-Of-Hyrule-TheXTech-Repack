@@ -14,3 +14,8 @@ Original site: https://rpgmaker.net/games/6733/
 - [ ] Change the coin sound in the disclaimer screen with a rupee sound, like in the Link To The Past game.
 
 (more to come) 
+
+## Screenshots
+![Disclaimer Screen](https://github.com/DarkWeBareBears69/The-Last-King-Of-Hyrule-TheXTech-Repack/blob/main/screenshots/Screenshot_2024-03-13-08-10-23-15_fc9b0eb1832cb4f1879c12bf3b54568e.jpg?raw=true)
+![Title Screen (the homepage will be changed...)](https://github.com/DarkWeBareBears69/The-Last-King-Of-Hyrule-TheXTech-Repack/blob/main/screenshots/Screenshot_2024-03-13-08-10-45-05_fc9b0eb1832cb4f1879c12bf3b54568e.jpg?raw=true)
+![Gameplay](https://github.com/DarkWeBareBears69/The-Last-King-Of-Hyrule-TheXTech-Repack/blob/main/screenshots/Screenshot_2024-03-13-08-12-16-22_fc9b0eb1832cb4f1879c12bf3b54568e.jpg?raw=true)
