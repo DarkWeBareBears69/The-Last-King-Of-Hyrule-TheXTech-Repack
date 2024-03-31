@@ -16,6 +16,7 @@ Original site: https://rpgmaker.net/games/6733/
 - [ ] Change the homepage in the title screen.
 - [ ] Change the coin sound in the disclaimer screen with a rupee sound, like in the Link To The Past game.
 - [ ] Change the warping sound in the map
+- [ ] Change the outro level
 
 (more to come) 
 
