@@ -5,16 +5,16 @@ Original site: https://rpgmaker.net/games/6733/
 
 ## Differences In This Repack (incomplete)
 - [x] A new disclaimer image
-- [x] The SMBX logo in the title screen has replaced with the actual logo of the episode
+- [x] The SMBX logo in the title screen has been replaced with the actual logo of the episode
 - [x] The curtain in the title screen is now purple, like in the Zelda 2 game.
 - [x] The coins in the HUD are replaced with rupees. 
-- [x] The crash game (battle mode) button in the title screen has removed in the repack.
+- [x] The crash game (battle mode) button in the title screen has been removed in the repack.
 - [x] Fixed the bug where you can repeat the intro cutscene.
 - [x] The star in the HUD is now replaced with a triforce.
 - [x] Change the map interface background
 - [x] Fix the bug in the Manhandla boss by nerfing it. (hopefully a temporary fix)
 - [x] Change the homepage URL in the title screen.
-- [ ] Change the coin sound in the disclaimer screen with a rupee sound, like in the Link To The Past game.
+- [ ] Change the coin sound on the disclaimer screen to a rupee sound, like in the Link To The Past game.
 - [ ] Change the warping sound in the map
 - [ ] Change the outro level
 
