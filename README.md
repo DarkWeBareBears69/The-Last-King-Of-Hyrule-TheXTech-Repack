@@ -17,7 +17,7 @@ Original site: https://rpgmaker.net/games/6733/
 - [ ] Change the coin sound on the disclaimer screen to a rupee sound, like in the Link To The Past game.
 - [ ] Change the warping sound in the map
 - [ ] Change the outro level
-- [ ] Change all of the sprites into NES 8-bit styled ones (suggestion by Shadowblitz16)
+- [ ] Change all of the SNES-styled sprites into NES 8-bit styled ones (suggestion by Shadowblitz16)
 
 (more to come) 
 
